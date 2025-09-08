@@ -1,10 +1,11 @@
 import DashboardLayout from "@/components/DashboardLayout";
 import Card from "@/components/Card";
 import DistanceChart from "@/components/DistanceChart";
+import RecentRunsTable from "@/components/RecentRunsTable";
 
 export default function DashboardPage() {
   return (
-    <main className="p-6 space-y-6">
+    <main className="p-6 space-y-10">
       <DashboardLayout>
         {/* Cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -17,6 +18,11 @@ export default function DashboardPage() {
         {/* Gráfico */}
         <div className="mt-10">
           <DistanceChart />
+        </div>
+
+        {/* Tabela */}
+        <div className="mt-10">
+          <RecentRunsTable />
         </div>
       </DashboardLayout>
     </main>
