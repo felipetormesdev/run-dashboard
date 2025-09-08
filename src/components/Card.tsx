@@ -1,15 +1,14 @@
-import { ReactNode } from "react";
-
-interface CardProps {
-  title: string;
-  children: ReactNode;
-}
-
-export default function Card({ title, children }: CardProps) {
-  return (
-    <div className="bg-white rounded-xl shadow-md p-6 flex flex-col">
-      <h2 className="text-lg font-semibold text-gray-700 mb-4">{title}</h2>
-      <div className="text-2xl font-bold text-green-600">{children}</div>
-    </div>
-  );
-}
+type CardProps = {
+    title: string;
+    value: string;
+  };
+  
+  export default function Card({ title, value }: CardProps) {
+    return (
+      <div className="rounded-xl bg-white p-6 shadow-md">
+        <h2 className="text-lg font-semibold text-gray-700">{title}</h2>
+        <p className="mt-2 text-2xl font-bold text-green-600">{value}</p>
+      </div>
+    );
+  }
+  
