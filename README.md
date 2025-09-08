@@ -10,19 +10,10 @@ Um dashboard interativo para analisar treinos de corrida sincronizados com Strav
 
 ## 📦 Setup do Ambiente
 
-### Pré-requisitos
-- Node.js 20 (via `nvm`)
-- Docker (para Postgres local) ou conta no Supabase
-- Conta no [Strava Developers](https://developers.strava.com/)
+👉 Veja o guia completo de instalação e configuração no arquivo [`SETUP.md`](./SETUP.md).
 
-### Instalação
-```bash
-git clone git@github.com:SEUUSER/run-dashboard.git
-cd run-dashboard
 
-# Carregar env automaticamente
-cp .env.local.example .env.local
-direnv allow
+## 🛠️ Status
 
-# Inicializar projeto (se ainda não feito)
-npx create-next-app@latest . --typescript
+Este projeto está em fase inicial de desenvolvimento (MVP).  
+Atualmente, focado na integração com **Strava** para sincronização de treinos de corrida.
