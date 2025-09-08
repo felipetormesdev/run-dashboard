@@ -14,11 +14,12 @@ function getEnvVar(key: string, required = true): string {
   export const config = {
     // Strava
     strava: {
-      baseUrl: getEnvVar("STRAVA_BASE_URL"),
-      clientId: getEnvVar("STRAVA_CLIENT_ID"),
-      clientSecret: getEnvVar("STRAVA_CLIENT_SECRET"),
-      redirectUri: getEnvVar("STRAVA_REDIRECT_URI"),
-      accessToken: process.env.STRAVA_ACCESS_TOKEN || "", // opcional
+      baseUrl: process.env.STRAVA_BASE_URL || "https://www.strava.com/api/v3",
+      clientId: process.env.STRAVA_CLIENT_ID,
+      clientSecret: process.env.STRAVA_CLIENT_SECRET,
+      redirectUri: process.env.STRAVA_REDIRECT_URI,
+      accessToken: process.env.STRAVA_ACCESS_TOKEN,
+      refreshToken: process.env.STRAVA_REFRESH_TOKEN,
     },
   
     // Garmin (placeholder)

@@ -137,9 +137,22 @@ O projeto ficará disponível em:
 
 ## 🧪 Testando a Integração com Strava
 
-Você pode testar se a API está funcionando chamando a rota:
+Antes de prosseguir com integrações mais complexas, você pode verificar se a rota da API está funcionando corretamente.
 
+1. Inicie o servidor local:
 ```bash
-http://localhost:3000/api/strava/test
+npm run dev
 ```
-Se o token estiver válido, você verá dados da sua conta Strava.
+2. Acesse a rota de health check no navegador ou via curl:
+```bash
+http://localhost:3000/api/strava/health
+```
+3. Você deve receber uma resposta como esta:
+```bash
+{
+  "status": "ok",
+  "message": "Strava API route is up 🚀",
+  "timestamp": "2025-09-08T18:45:00.123Z"
+}
+```
+Se essa resposta aparecer, significa que a rota da API está ativa e o projeto está pronto para continuar o desenvolvimento.
