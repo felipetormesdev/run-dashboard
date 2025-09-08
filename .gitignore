@@ -1,0 +1,19 @@
+# Node
+node_modules
+.next
+dist
+
+# Env (segredos e configs locais)
+.env.local
+.envrc
+
+# Sistema / IDE
+.DS_Store
+.vscode
+.idea
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
