@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "tailwind:init": "tailwindcss init -p",
-    "get-strava-token": "npx tsx scripts/get-strava-token.ts"
+    "get-strava-token": "npx tsx scripts/get-strava-token.ts",
+    "refresh-strava-token": "npx tsx scripts/refresh-strava-token.ts"
   },
   "dependencies": {
     "dotenv": "^17.2.2",
