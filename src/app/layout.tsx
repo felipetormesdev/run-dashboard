@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Layout from "@/components/Layout";
-
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Run Dashboard",
-  description: "Visualize suas corridas com estilo 🚀",
+  description: "Dashboard interativo para corredores",
 };
 
 export default function RootLayout({
@@ -17,8 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>
-        <Layout>{children}</Layout>
+      <body className="bg-gray-50 text-gray-900">
+        <header className="bg-green-600 text-white p-4">
+          <h1 className="text-xl font-bold">Run Dashboard</h1>
+        </header>
+        <main className="p-6">{children}</main>
       </body>
     </html>
   );
