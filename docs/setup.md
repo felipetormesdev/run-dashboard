@@ -126,6 +126,50 @@ STRAVA_REFRESH_TOKEN=yyy
 STRAVA_EXPIRES_AT=zzz
 ```
 
+## 🗄️ Database Setup
+
+Este projeto utiliza **PostgreSQL** para armazenar tokens e dados de atividades.
+
+### Usando Docker
+
+Se você tiver o Docker instalado, basta subir o banco com:
+
+```bash
+docker-compose up -d
+```
+Isso criará um banco `run_dashboard` acessível em `localhost:5432` com usuário e senha `postgres`.
+
+### Configuração Manual
+
+Se preferir rodar o Postgres manualmente (ex: via TablePlus, Supabase ou instalação local), configure as variáveis no `.env.local`:
+
+```bash
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=rundb
+```
+
+### Criando a Tabela de Tokens
+
+No banco, crie a tabela `tokens` (caso não exista) para armazenar os tokens de autenticação do Strava:
+
+```bash
+CREATE TABLE tokens (
+  id SERIAL PRIMARY KEY,
+  access_token TEXT NOT NULL,
+  refresh_token TEXT NOT NULL,
+  expires_at TIMESTAMP NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+```
+Depois de configurado, você pode testar a conexão acessando a rota:
+
+```bash
+http://localhost:3000/api/db-test
+```
+
 ## 🏃 Rodando o Projeto
 Inicie o servidor de desenvolvimento:
 ```bash
