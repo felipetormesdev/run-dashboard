@@ -10,7 +10,7 @@ Um dashboard interativo para analisar treinos de corrida sincronizados com Strav
 
 ## 📦 Setup do Ambiente
 
-👉 Veja o guia completo de instalação e configuração no arquivo [`SETUP.md`](.docs/SETUP.md).
+👉 Veja o guia completo de instalação e configuração no arquivo [`SETUP.md`](docs/setup.md).
 
 
 ## 🛠️ Status
